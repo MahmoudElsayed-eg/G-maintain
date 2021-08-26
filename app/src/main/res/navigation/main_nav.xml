@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainMenu">
+
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="com.example.g_maintain.ui.fragments.MainMenu"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenu_to_clientsFrag"
+            app:destination="@id/clientsFrag"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainMenu_to_regionsFrag"
+            app:destination="@id/regionsFrag"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainMenu_to_contractsFrag"
+            app:destination="@id/contractsFrag"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainMenu_to_searchContractsFrag"
+            app:destination="@id/searchContractsFrag"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainMenu_to_searchVisitsFrag"
+            app:destination="@id/searchVisitsFrag"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainMenu_to_buildContractsFrag"
+            app:destination="@id/buildContractsFrag"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/clientsFrag"
+        android:name="com.example.g_maintain.ui.fragments.ClientsFrag"
+        tools:layout="@layout/fragment_clients">
+        <action
+            android:id="@+id/action_clientsFrag_to_addClientFrag"
+            app:destination="@id/addClientFrag"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addClientFrag"
+        android:name="com.example.g_maintain.ui.fragments.AddClientFrag"
+        tools:layout="@layout/fragment_add_client" >
+        <argument
+            android:name="client"
+            app:argType="com.example.g_maintain.db.Client"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/regionsFrag"
+        android:name="com.example.g_maintain.ui.fragments.RegionsFrag"
+        tools:layout="@layout/fragment_regions">
+        <action
+            android:id="@+id/action_regionsFrag_to_addRegionsFrag"
+            app:destination="@id/addRegionsFrag"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRegionsFrag"
+        android:name="com.example.g_maintain.ui.fragments.AddRegionsFrag"
+        tools:layout="@layout/fragment_add_regions" >
+        <argument
+            android:name="region"
+            app:argType="com.example.g_maintain.db.Region"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/contractsFrag"
+        android:name="com.example.g_maintain.ui.fragments.ContractsFrag"
+        tools:layout="@layout/fragment_contracts">
+        <action
+            android:id="@+id/action_contractsFrag_to_addContractsFrag"
+            app:destination="@id/addContractsFrag"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addContractsFrag"
+        android:name="com.example.g_maintain.ui.fragments.AddVisitFrag"
+        tools:layout="@layout/fragment_add_visit" >
+        <argument
+            android:name="visit"
+            app:argType="com.example.g_maintain.db.Visit"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="contractId"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchContractsFrag"
+        android:name="com.example.g_maintain.ui.fragments.SearchContractsFrag"
+        tools:layout="@layout/fragment_search_contracts" >
+        <action
+            android:id="@+id/action_searchContractsFrag_to_buildContractsFrag"
+            app:destination="@id/buildContractsFrag"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchVisitsFrag"
+        android:name="com.example.g_maintain.ui.fragments.SearchVisitsFrag"
+        tools:layout="@layout/fragment_search_visits" >
+        <action
+            android:id="@+id/action_searchVisitsFrag_to_addContractsFrag"
+            app:destination="@id/addContractsFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/buildContractsFrag"
+        android:name="com.example.g_maintain.ui.fragments.BuildContractsFrag"
+        tools:layout="@layout/fragment_build_contract">
+        <action
+            android:id="@+id/action_buildContractsFrag_to_addContractsFrag"
+            app:destination="@id/addContractsFrag"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="contract"
+            app:argType="com.example.g_maintain.db.Contract"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_buildContractsFrag_to_addClientFrag"
+            app:destination="@id/addClientFrag" />
+    </fragment>
+</navigation>

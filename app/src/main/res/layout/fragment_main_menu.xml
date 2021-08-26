@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_green"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.MainMenu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/filter2"
+             />
+
+        <Button
+            android:id="@+id/btnClients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:drawableEnd="@drawable/group"
+            android:drawablePadding="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="@string/clients"
+            android:textAllCaps="false"
+            android:textColor="@color/light_green"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnRegions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:drawableEnd="@drawable/place"
+            android:drawablePadding="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="@string/places"
+            android:textAllCaps="false"
+            android:textColor="@color/light_green"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnContracts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:drawableEnd="@drawable/form"
+            android:drawablePadding="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="@string/contract"
+            android:textAllCaps="false"
+            android:textColor="@color/light_green"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnBuildContract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:drawableEnd="@drawable/form_add"
+            android:drawablePadding="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="@string/build_contract"
+            android:textAllCaps="false"
+            android:textColor="@color/light_green"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnSearchVisitsMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:drawableEnd="@drawable/search"
+            android:drawablePadding="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="@string/search_visits"
+            android:textAllCaps="false"
+            android:textColor="@color/light_green"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnSearchContractsMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:drawableEnd="@drawable/search"
+            android:drawablePadding="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="@string/search_contracts"
+            android:textAllCaps="false"
+            android:textColor="@color/light_green"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/btnInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/light_green"
+            android:clickable="true"
+            app:srcCompat="@drawable/info"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+</ScrollView>

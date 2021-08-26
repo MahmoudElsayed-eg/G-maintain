@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_green"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.BuildContractsFrag">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtFirstDateBuild"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:textColor="@color/dark_green"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnFirstDateBuild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button"
+            android:padding="5dp"
+            android:text="@string/date_first"
+            android:textColor="@color/light_green"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtContractName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        app:boxStrokeColor="@color/dark_green"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textColorHint="@color/dark_green"
+        app:hintTextColor="@color/dark_green"
+        app:endIconMode="clear_text"
+        android:layoutDirection="rtl"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/contract_name"
+            android:textCursorDrawable="@null"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+        android:id="@+id/autoCompleteClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/auto_bg"
+        android:ems="10"
+        android:hint="@string/client_name"
+        android:padding="18dp"
+        android:textCursorDrawable="@null"
+        android:textColorHint="@color/dark_green"
+        />
+
+    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+        android:id="@+id/autoCompleteRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/auto_bg"
+        android:ems="10"
+        android:hint="@string/region"
+        android:padding="18dp"
+        android:textCursorDrawable="@null"
+        android:textColorHint="@color/dark_green"
+        />
+
+    <Button
+        android:id="@+id/btnBuildContractBuild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_button"
+        android:padding="5dp"
+        android:text="@string/build_contract"
+        android:textColor="@color/light_green"
+        android:textSize="18sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBuild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/dark_green"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        android:layoutDirection="ltr"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="@string/status_only"
+                android:textAlignment="center"
+                android:textColor="@color/light_green"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/price"
+                android:textAlignment="center"
+                android:textColor="@color/light_green"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/date_first"
+                android:textAlignment="center"
+                android:textColor="@color/light_green"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/visit_name"
+                android:textAlignment="center"
+                android:textColor="@color/light_green"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@color/light_green"
+        android:orientation="vertical">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/visitsRvBuild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layoutDirection="ltr"
+        >
+
+        <Button
+            android:id="@+id/btnEditContract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button"
+            android:visibility="gone"
+            android:textColor="@color/light_green"
+            android:text="@string/save"
+            tools:visibility="visible"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"/>
+
+        <Button
+            android:id="@+id/btnDeleteContract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button"
+            android:text="@string/delete"
+            android:textColor="@color/light_green"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAddVisitBuild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:tint="@color/light_green"
+            android:visibility="gone"
+            app:backgroundTint="@color/dark_green"
+            app:fabSize="auto"
+            app:srcCompat="@drawable/add"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>
+</ScrollView>

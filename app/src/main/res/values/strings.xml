@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">G-maintain</string>
+    <string name="clients">العملاء</string>
+    <string name="places">المناطق</string>
+    <string name="contract">نموذج عقد صيانة</string>
+    <string name="build_contract">انشاء عقد صيانة</string>
+    <string name="search_visits">بحث الزيارات</string>
+    <string name="search_contracts">بحث العقود</string>
+    <string name="add_client">اضافة عميل</string>
+    <string name="client_name">اسم العميل</string>
+    <string name="super_visor_name">اسم المسؤول</string>
+    <string name="phone">رقم الهاتف</string>
+    <string name="phone2">رقم الهاتف الثاني</string>
+    <string name="address">العنوان</string>
+    <string name="notes">ملاحظات</string>
+    <string name="save">حفظ</string>
+    <string name="add_region">اضافة منطقة</string>
+    <string name="region">المنطقة</string>
+    <string name="search">بحث</string>
+    <string name="search_all">بحث الكل</string>
+    <string name="date_first">تاريخ الزيارة</string>
+    <string name="date_last">تاريخ اخر زيارة</string>
+    <string name="period">الفترة بين الزيارات</string>
+    <string name="visit_name">اسم الزيارة</string>
+    <string name="description">الوصف</string>
+    <string name="price">السعر</string>
+    <string name="status">الحالة : تمت</string>
+    <string name="add_visit">اضافة زيارة</string>
+    <string name="delete">حذف</string>
+    <string name="customer_service">خدمة العملاء :</string>
+    <string name="technical_service">الدعم الفني :</string>
+    <string name="status_only">الحالة</string>
+    <string name="phone_elsayed">01278631858</string>
+    <string name="phone_mahmoud">01223542367</string>
+    <string name="contract_name">اسم العقد</string>
+
+</resources>
